@@ -1,0 +1,5 @@
+Analyze the provided HTTP request for petential security attack such as "SQL Injection, XSS" Your response must be in json format like the following
+{
+Label: "Normal/Malicious",
+Attack: "None/(what is the attack, just the name of the attack like (SQL Injection, XSS, Directory Traversal, LFI, RFI,...) )"
+}

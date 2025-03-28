@@ -1,0 +1,191 @@
+[
+    {
+        "log": {
+            "Method": "GET",
+            "User-Agent": "Mozilla/5.0 (compatible; Konqueror/3.5; Linux) KHTML/3.5.8 (like Gecko)",
+            "Pragma": "no-cache",
+            "Cache-Control": "no-cache",
+            "Accept": "text/xml,application/xml,application/xhtml\uc669\ufffd,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5",
+            "Accept-encoding": "x-gzip, x-deflate, gzip, deflate",
+            "Accept-charset": "utf-8, utf-8;q=0.5, *;q=0.5",
+            "language": "en",
+            "host": "localhost:8080",
+            "cookie": "JSESSIONID=1F767F17239C9B670A39E9B10C3825F4",
+            "content-type": "",
+            "connection": "close",
+            "lenght": "",
+            "content": "",
+            "URL": "http://localhost:8080/tienda1/index.jsp HTTP/1.1"
+        },
+        "label": "Normal",
+        "attack": "None"
+    },
+    {
+        "log": {
+            "Method": "GET",
+            "User-Agent": "Mozilla/5.0 (compatible; Konqueror/3.5; Linux) KHTML/3.5.8 (like Gecko)",
+            "Pragma": "no-cache",
+            "Cache-Control": "no-cache",
+            "Accept": "text/xml,application/xml,application/xhtml\uc669\ufffd,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5",
+            "Accept-encoding": "x-gzip, x-deflate, gzip, deflate",
+            "Accept-charset": "utf-8, utf-8;q=0.5, *;q=0.5",
+            "language": "en",
+            "host": "localhost:8080",
+            "cookie": "JSESSIONID=81761ACA043B0E6014CA42A4BCD06AB5",
+            "content-type": "",
+            "connection": "close",
+            "lenght": "",
+            "content": "",
+            "URL": "http://localhost:8080/tienda1/publico/anadir.jsp?id=3&nombre=Vino\u462a\ufffd&precio=100&cantidad=55&B1=A%F1adir\u6a5f\u9c6a\ubae2\ufffd HTTP/1.1"
+        },
+        "label": "Normal",
+        "attack": "None"
+    },
+    {
+        "log": {
+            "Method": "POST",
+            "User-Agent": "Mozilla/5.0 (compatible; Konqueror/3.5; Linux) KHTML/3.5.8 (like Gecko)",
+            "Pragma": "no-cache",
+            "Cache-Control": "no-cache",
+            "Accept": "text/xml,application/xml,application/xhtml\uc669\ufffd,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5",
+            "Accept-encoding": "x-gzip, x-deflate, gzip, deflate",
+            "Accept-charset": "utf-8, utf-8;q=0.5, *;q=0.5",
+            "language": "en",
+            "host": "localhost:8080",
+            "cookie": "JSESSIONID=933185092E0B668B90676E0A2B0767AF",
+            "content-type": "application/x-www-form-urlencoded",
+            "connection": "Connection: close",
+            "lenght": "Content-Length: 68",
+            "content": "id=3&nombre=Vino\u462a\ufffd&precio=100&cantidad=55&B1=A%F1adir\u6a5f\u9c6a\ubae2\ufffd",
+            "URL": "http://localhost:8080/tienda1/publico/anadir.jsp HTTP/1.1"
+        },
+        "label": "Normal",
+        "attack": "None"
+    },
+    {
+        "log": {
+            "Method": "GET",
+            "User-Agent": "Mozilla/5.0 (compatible; Konqueror/3.5; Linux) KHTML/3.5.8 (like Gecko)",
+            "Pragma": "no-cache",
+            "Cache-Control": "no-cache",
+            "Accept": "text/xml,application/xml,application/xhtml\uc669\ufffd,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5",
+            "Accept-encoding": "x-gzip, x-deflate, gzip, deflate",
+            "Accept-charset": "utf-8, utf-8;q=0.5, *;q=0.5",
+            "language": "en",
+            "host": "localhost:8080",
+            "cookie": "JSESSIONID=8FA18BA82C5336D03D3A8AFA3E68CBB0",
+            "content-type": "",
+            "connection": "close",
+            "lenght": "",
+            "content": "",
+            "URL": "http://localhost:8080/tienda1/publico/autenticar.jsp?modo=entrar&login=choong&pwd=d1se3ci%F3n&remember=off&B1=Entrar HTTP/1.1"
+        },
+        "label": "Normal",
+        "attack": "None"
+    },
+    {
+        "log": {
+            "Method": "GET",
+            "User-Agent": "Mozilla/5.0 (compatible; Konqueror/3.5; Linux) KHTML/3.5.8 (like Gecko)",
+            "Pragma": "no-cache",
+            "Cache-Control": "no-cache",
+            "Accept": "text/xml,application/xml,application/xhtml\uc669\ufffd,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5",
+            "Accept-encoding": "x-gzip, x-deflate, gzip, deflate",
+            "Accept-charset": "utf-8, utf-8;q=0.5, *;q=0.5",
+            "language": "en",
+            "host": "localhost:8080",
+            "cookie": "JSESSIONID=B92A8B48B9008CD29F622A994E0F650D",
+            "content-type": "",
+            "connection": "close",
+            "lenght": "",
+            "content": "",
+            "URL": "http://localhost:8080/tienda1/publico/anadir.jsp?id=2&nombre=Jam%F3n\ufffd%E9rico&precio=85&cantidad=%27%3B\u0d13\u8ff9\u3001\u2c4f\uaeb2\ue6ab\u8a8b%3B\u4842\uc409\ufffd*\u1513\u8cf9\ud6ad\ua2cf\u961c\u4444\ufa7a\u266e\ub7be\u2c82\ufffd%27%25&B1=A%F1adir\u6a5f\u9c6a\ubae2\ufffd HTTP/1.1"
+        },
+        "label": "Anomalous",
+        "attack": "SQL Injection"
+    },
+    {
+        "log": {
+            "Method": "POST",
+            "User-Agent": "Mozilla/5.0 (compatible; Konqueror/3.5; Linux) KHTML/3.5.8 (like Gecko)",
+            "Pragma": "no-cache",
+            "Cache-Control": "no-cache",
+            "Accept": "text/xml,application/xml,application/xhtml\uc669\ufffd,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5",
+            "Accept-encoding": "x-gzip, x-deflate, gzip, deflate",
+            "Accept-charset": "utf-8, utf-8;q=0.5, *;q=0.5",
+            "language": "en",
+            "host": "localhost:8080",
+            "cookie": "JSESSIONID=AE29AEEBDE479D5E1A18B4108C8E3CE0",
+            "content-type": "application/x-www-form-urlencoded",
+            "connection": "Connection: close",
+            "lenght": "Content-Length: 146",
+            "content": "id=2&nombre=Jam%F3n\ufffd%E9rico&precio=85&cantidad=%27%3B\u0d13\u8ff9\u3001\u2c4f\uaeb2\ue6ab\u8a8b%3B\u4842\uc409\ufffd*\u1513\u8cf9\ud6ad\ua2cf\u961c\u4444\ufa7a\u266e\ub7be\u2c82\ufffd%27%25&B1=A%F1adir\u6a5f\u9c6a\ubae2\ufffd",
+            "URL": "http://localhost:8080/tienda1/publico/anadir.jsp HTTP/1.1"
+        },
+        "label": "Anomalous",
+        "attack": "SQL Injection"
+    },
+    {
+        "log": {
+            "Method": "GET",
+            "User-Agent": "Mozilla/5.0 (compatible; Konqueror/3.5; Linux) KHTML/3.5.8 (like Gecko)",
+            "Pragma": "no-cache",
+            "Cache-Control": "no-cache",
+            "Accept": "text/xml,application/xml,application/xhtml\uc669\ufffd,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5",
+            "Accept-encoding": "x-gzip, x-deflate, gzip, deflate",
+            "Accept-charset": "utf-8, utf-8;q=0.5, *;q=0.5",
+            "language": "en",
+            "host": "localhost:8080",
+            "cookie": "JSESSIONID=F563B5262843F12ECAE41815ABDEEA54",
+            "content-type": "",
+            "connection": "close",
+            "lenght": "",
+            "content": "",
+            "URL": "http://localhost:8080/tienda1/publico/anadir.jsp?id=2%2F&nombre=Jam%F3n\ufffd%E9rico&precio=85&cantidad=49&B1=A%F1adir\u6a5f\u9c6a\ubae2\ufffd HTTP/1.1"
+        },
+        "label": "Anomalous",
+        "attack": "SQL Injection"
+    },
+    {
+        "log": {
+            "Method": "POST",
+            "User-Agent": "Mozilla/5.0 (compatible; Konqueror/3.5; Linux) KHTML/3.5.8 (like Gecko)",
+            "Pragma": "no-cache",
+            "Cache-Control": "no-cache",
+            "Accept": "text/xml,application/xml,application/xhtml\uc669\ufffd,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5",
+            "Accept-encoding": "x-gzip, x-deflate, gzip, deflate",
+            "Accept-charset": "utf-8, utf-8;q=0.5, *;q=0.5",
+            "language": "en",
+            "host": "localhost:8080",
+            "cookie": "JSESSIONID=3B654D6DF7F1466EE80D7F756B00E5D1",
+            "content-type": "application/x-www-form-urlencoded",
+            "connection": "Connection: close",
+            "lenght": "Content-Length: 77",
+            "content": "id=2%2F&nombre=Jam%F3n\ufffd%E9rico&precio=85&cantidad=49&B1=A%F1adir\u6a5f\u9c6a\ubae2\ufffd",
+            "URL": "http://localhost:8080/tienda1/publico/anadir.jsp HTTP/1.1"
+        },
+        "label": "Anomalous",
+        "attack": "SQL Injection"
+    },
+    {
+        "log": {
+            "Method": "GET",
+            "User-Agent": "Mozilla/5.0 (compatible; Konqueror/3.5; Linux) KHTML/3.5.8 (like Gecko)",
+            "Pragma": "no-cache",
+            "Cache-Control": "no-cache",
+            "Accept": "text/xml,application/xml,application/xhtml\uc669\ufffd,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5",
+            "Accept-encoding": "x-gzip, x-deflate, gzip, deflate",
+            "Accept-charset": "utf-8, utf-8;q=0.5, *;q=0.5",
+            "language": "en",
+            "host": "localhost:8080",
+            "cookie": "JSESSIONID=51A7470173188BBB993947F2283059E4",
+            "content-type": "",
+            "connection": "close",
+            "lenght": "",
+            "content": "",
+            "URL": "http://localhost:8080/asf-logo-wide.gif~ HTTP/1.1"
+        },
+        "label": "Anomalous",
+        "attack": "Directory Traversal"
+    }
+]

