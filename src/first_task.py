@@ -4,9 +4,8 @@ import json
 import time
 import utils
 
-
 # MODELS = ['llama3.2', 'deepseek-r1']
-MODELS = ['llama3.2', 'llama3.1']
+MODELS = ['llama3.2']
 
 input_file = '../dataset/first_task_tests.json'
 
@@ -24,7 +23,7 @@ def make_prompt(log):
     return f"""
 You are a cybersecurity expert analyzing HTTP requests to determine whether they are part of a cyber attack or normal web traffic.
 
-Given the following HTTP request, classify it as either "benign" or "malicious".
+Given the following HTTP request, give me answer if it's "benign" or "malicious". I only need single word answer I don't need any explanations.
 
 HTTP Request:
 {log}
@@ -53,14 +52,18 @@ for i, entry in enumerate(api_requests):
                 model=model,
                 messages=[{"role": "user", "content": prompt}]
             )
-
             content = response["message"]["content"]
+            if not content or content == "error":
+                content = None
+            model_output.append(content)
             print(f"[{model}] Response:\n{content}")
+
 
             parsed = json.loads(content)
         except Exception as e:
-            print(f"[!] Error with model {model} on entry {i}: {e}")
-            parsed = {"is_attackable": None, "attack_type": "error"}
+            # print(f"[!] Error with model {model} on entry {i}: {e}")
+            # parsed = {"is_attackable": None, "attack_type": "error"}
+            parsed = {"label": content}
 
         model_results[model].append({
             "log": log,
@@ -74,7 +77,10 @@ for model in MODELS:
     output_file = f"results_{model.replace(':', '_')}.json"
     with open(output_file, "w") as f:
         json.dump(model_results[model], f, indent=2)
-
+print('GROUND TRUTH___')
+print(ground_truth)
+print('MODEL RESPONSE__')
+print(model_output)
 print("\n✅ Done! Results saved for:")
 for model in MODELS:
     print(f"→ {model}: results_{model.replace(':', '_')}.json")
