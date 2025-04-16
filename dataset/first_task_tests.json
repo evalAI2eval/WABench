@@ -17,7 +17,7 @@
             "content": "",
             "URL": "http://localhost:8080/tienda1/index.jsp HTTP/1.1"
         },
-        "label": "Normal",
+        "label": "Benign",
         "attack": "None"
     },
     {
@@ -38,7 +38,7 @@
             "content": "",
             "URL": "http://localhost:8080/tienda1/publico/anadir.jsp?id=3&nombre=Vino\u462a\ufffd&precio=100&cantidad=55&B1=A%F1adir\u6a5f\u9c6a\ubae2\ufffd HTTP/1.1"
         },
-        "label": "Normal",
+        "label": "Benign",
         "attack": "None"
     },
     {
@@ -59,7 +59,7 @@
             "content": "id=3&nombre=Vino\u462a\ufffd&precio=100&cantidad=55&B1=A%F1adir\u6a5f\u9c6a\ubae2\ufffd",
             "URL": "http://localhost:8080/tienda1/publico/anadir.jsp HTTP/1.1"
         },
-        "label": "Normal",
+        "label": "Benign",
         "attack": "None"
     },
     {
@@ -80,7 +80,7 @@
             "content": "",
             "URL": "http://localhost:8080/tienda1/publico/autenticar.jsp?modo=entrar&login=choong&pwd=d1se3ci%F3n&remember=off&B1=Entrar HTTP/1.1"
         },
-        "label": "Normal",
+        "label": "Benign",
         "attack": "None"
     },
     {
@@ -101,7 +101,7 @@
             "content": "",
             "URL": "http://localhost:8080/tienda1/publico/anadir.jsp?id=2&nombre=Jam%F3n\ufffd%E9rico&precio=85&cantidad=%27%3B\u0d13\u8ff9\u3001\u2c4f\uaeb2\ue6ab\u8a8b%3B\u4842\uc409\ufffd*\u1513\u8cf9\ud6ad\ua2cf\u961c\u4444\ufa7a\u266e\ub7be\u2c82\ufffd%27%25&B1=A%F1adir\u6a5f\u9c6a\ubae2\ufffd HTTP/1.1"
         },
-        "label": "Anomalous",
+        "label": "Malicious",
         "attack": "SQL Injection"
     },
     {
@@ -122,7 +122,7 @@
             "content": "id=2&nombre=Jam%F3n\ufffd%E9rico&precio=85&cantidad=%27%3B\u0d13\u8ff9\u3001\u2c4f\uaeb2\ue6ab\u8a8b%3B\u4842\uc409\ufffd*\u1513\u8cf9\ud6ad\ua2cf\u961c\u4444\ufa7a\u266e\ub7be\u2c82\ufffd%27%25&B1=A%F1adir\u6a5f\u9c6a\ubae2\ufffd",
             "URL": "http://localhost:8080/tienda1/publico/anadir.jsp HTTP/1.1"
         },
-        "label": "Anomalous",
+        "label": "Malicious",
         "attack": "SQL Injection"
     },
     {
@@ -143,7 +143,7 @@
             "content": "",
             "URL": "http://localhost:8080/tienda1/publico/anadir.jsp?id=2%2F&nombre=Jam%F3n\ufffd%E9rico&precio=85&cantidad=49&B1=A%F1adir\u6a5f\u9c6a\ubae2\ufffd HTTP/1.1"
         },
-        "label": "Anomalous",
+        "label": "Malicious",
         "attack": "SQL Injection"
     },
     {
@@ -164,7 +164,7 @@
             "content": "id=2%2F&nombre=Jam%F3n\ufffd%E9rico&precio=85&cantidad=49&B1=A%F1adir\u6a5f\u9c6a\ubae2\ufffd",
             "URL": "http://localhost:8080/tienda1/publico/anadir.jsp HTTP/1.1"
         },
-        "label": "Anomalous",
+        "label": "Malicious",
         "attack": "SQL Injection"
     },
     {
@@ -185,7 +185,7 @@
             "content": "",
             "URL": "http://localhost:8080/asf-logo-wide.gif~ HTTP/1.1"
         },
-        "label": "Anomalous",
+        "label": "Malicious",
         "attack": "Directory Traversal"
     }
 ]

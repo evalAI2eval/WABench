@@ -1,5 +1,8 @@
-Analyze the provided HTTP request for petential security attack such as "SQL Injection, XSS" Your response must be in json format like the following
-{
-Label: "Normal/Malicious",
-Attack: "None/(what is the attack, just the name of the attack like (SQL Injection, XSS, Directory Traversal, LFI, RFI,...) )"
-}
+You are a cybersecurity expert analyzing HTTP requests to determine whether they are part of a cyber attack or normal web traffic.
+
+Given the following HTTP request, give me answer if it's "benign" or "malicious". I only need single word answer I don't need any explanations.
+
+HTTP Request:
+{log}
+
+Your response should be one word only: "benign" or "malicious".
