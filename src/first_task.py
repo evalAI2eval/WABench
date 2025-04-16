@@ -5,7 +5,6 @@ import time
 import utils
 
 
-import pdb;pdb.set_trace()
 # MODELS = ['llama3.2', 'deepseek-r1']
 MODELS = ['llama3.2', 'llama3.1']
 
