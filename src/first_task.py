@@ -2,6 +2,10 @@ import ollama
 import os 
 import json 
 import time
+import utils
+
+
+import pdb;pdb.set_trace()
 # MODELS = ['llama3.2', 'deepseek-r1']
 MODELS = ['llama3.2', 'llama3.1']
 
@@ -19,21 +23,26 @@ with open(input_file, 'r') as f:
 
 def make_prompt(log):
     return f"""
-Given the following HTTP request log: 
-{log}
-Can this request be used in web attack?
-Options for attack_type: [sqli, xss, lfi, rfi, file_upload, none]
+You are a cybersecurity expert analyzing HTTP requests to determine whether they are part of a cyber attack or normal web traffic.
 
-Respond in *valid* JSON format:
-{{ "is_attackable": true/false, "attack_type": "..." }}
+Given the following HTTP request, classify it as either "benign" or "malicious".
+
+HTTP Request:
+{log}
+
+Your response should be one word only: "benign" or "malicious".
+
 """
 
 # === Initialize result containers ===
 model_results = {model: [] for model in MODELS}
 
+ground_truth = []
+model_output = []
 # === Main loop ===
 for i, entry in enumerate(api_requests):
-    log = entry["log"]
+    log = utils.build_http_request(entry.get("log", {}))
+    ground_truth.append(entry.get("label"))
     # prompt = make_prompt(log)
     prompt = make_prompt(entry)
 
