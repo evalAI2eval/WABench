@@ -3,10 +3,10 @@ import os
 import json 
 import time
 import utils
+import evaluation
 
 # MODELS = ['llama3.2', 'deepseek-r1']
 MODELS = ['llama3.2']
-
 input_file = '../dataset/first_task_tests.json'
 
 if not os.path.exists(input_file):
@@ -17,6 +17,8 @@ else:
     
 with open(input_file, 'r') as f:
     api_requests = json.load(f)
+
+
 
 
 def make_prompt(log):
@@ -63,7 +65,7 @@ for i, entry in enumerate(api_requests):
         except Exception as e:
             # print(f"[!] Error with model {model} on entry {i}: {e}")
             # parsed = {"is_attackable": None, "attack_type": "error"}
-            parsed = {"label": content}
+            parsed = {"label": "None"}
 
         model_results[model].append({
             "log": log,
@@ -82,5 +84,9 @@ print(ground_truth)
 print('MODEL RESPONSE__')
 print(model_output)
 print("\n✅ Done! Results saved for:")
+eval = evaluation.Evaluation()
+evl_result = eval.evaluate_from_lists(ground_truth=ground_truth, model_output=model_output)
+print(eval)
+eval.plot_metrics_figure(evl_result)
 for model in MODELS:
     print(f"→ {model}: results_{model.replace(':', '_')}.json")
