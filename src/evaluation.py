@@ -66,3 +66,46 @@ class Evaluation:
         plt.grid(axis='y', linestyle='--', alpha=0.6)
         plt.tight_layout()
         plt.show()
+
+    def evaluate_perturbation_effects(self, model_outputs, perturbations, ground_truth):
+        flip_results = []
+        weight_results = []
+
+        for pred, p_info in zip(model_outputs, perturbations):
+            perturbation = p_info.get("perturbation", "unknown")
+            was_correct = (pred.lower().strip() == ground_truth.lower().strip())
+            
+            flip_results.append({
+                "perturbation": perturbation,
+                "model_output": pred,
+                "correct": was_correct
+            })
+
+            # Calculate the weight of the perturbation based on model's sensitivity
+            if not was_correct:
+                weight_results.append({
+                    "perturbation": perturbation,
+                    "weight": 1  # If perturbation changes output, assign high weight
+                })
+            else:
+                weight_results.append({
+                    "perturbation": perturbation,
+                    "weight": 0  # If perturbation doesn't change output, low weight
+                })
+
+        # Output the results
+        print("\n=== Perturbation Impact Report ===")
+        for result in flip_results:
+            status = "✅" if result["correct"] else "❌"
+            print(f"{status} Perturbation: {result['perturbation']}, Model Prediction: {result['model_output']}")
+
+        total = len(flip_results)
+        correct = sum(r["correct"] for r in flip_results)
+        print(f"\nAccuracy under perturbations: {correct}/{total} ({100 * correct/total:.1f}%)")
+
+        # Display the weight of each perturbation
+        print("\n=== Perturbation Weight Analysis ===")
+        for weight_result in weight_results:
+            print(f"Perturbation: {weight_result['perturbation']}, Weight: {weight_result['weight']}")
+
+        return flip_results, weight_results

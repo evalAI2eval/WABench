@@ -17,7 +17,7 @@ def build_http_request(log):
     request_lines = [f"{method} {url_path} {http_version}"]
 
     # Headers to exclude from body content
-    excluded_headers = {"Method", "URL", "content", "lenght"}  # 'lenght' is assumed to be a typo for 'length'
+    excluded_headers = {"Method", "URL", "content", "lenght", "perturbation"}  # 'lenght' is assumed to be a typo for 'length'
 
     for key, value in log.items():
         if key not in excluded_headers and value:
