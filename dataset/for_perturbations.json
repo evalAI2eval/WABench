@@ -1,0 +1,23 @@
+[
+    {
+        "log": {
+            "Method": "GET",
+            "User-Agent": "Mozilla/5.0 (compatible; Konqueror/3.5; Linux) KHTML/3.5.8 (like Gecko)",
+            "Pragma": "no-cache",
+            "Cache-Control": "no-cache",
+            "Accept": "text/xml,application/xml,application/xhtml\uc669\ufffd,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5",
+            "Accept-encoding": "x-gzip, x-deflate, gzip, deflate",
+            "Accept-charset": "utf-8, utf-8;q=0.5, *;q=0.5",
+            "language": "en",
+            "host": "localhost:8080",
+            "cookie": "JSESSIONID=B92A8B48B9008CD29F622A994E0F650D",
+            "content-type": "",
+            "connection": "close",
+            "lenght": "",
+            "content": "",
+            "URL": "http://localhost:8080/tienda1/publico/anadir.jsp?id=' OR '1'='1' -- HTTP/1.1"
+        },
+        "label": "Malicious",
+        "attack": "sqli"
+    }
+]
