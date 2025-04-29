@@ -97,11 +97,15 @@ for i, entry in enumerate(api_requests):
         model_results[model].append({
             "log": log,
             "model": model,
-            **parsed
+            "label": content
         })
         time.sleep(0.3)  # prevent overload (optional)
 
 # === Save results ===
+for model in MODELS:
+    output_file = f"results_task2_{model.replace(':', '_')}.json"
+    with open(output_file, "w") as f:
+        json.dump(model_results[model], f, indent=2)
 print('GROUND TRUTH___')
 print(ground_truth)
 print('MODEL RESPONSE__')

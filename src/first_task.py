@@ -7,7 +7,7 @@ import evaluation
 
 # MODELS = ['llama3.2', 'deepseek-r1']
 MODELS = ['llama3.2']
-input_file = '../dataset/data.json'
+input_file = '../dataset/dataset.json'
 
 if not os.path.exists(input_file):
     print(f"Input file '{input_file}' not found")
@@ -70,13 +70,13 @@ for i, entry in enumerate(api_requests):
         model_results[model].append({
             "log": log,
             "model": model,
-            **parsed
+            "label": content
         })
         time.sleep(0.3)  # prevent overload (optional)
 
 # === Save results ===
 for model in MODELS:
-    output_file = f"results_{model.replace(':', '_')}.json"
+    output_file = f"results_task1_{model.replace(':', '_')}.json"
     with open(output_file, "w") as f:
         json.dump(model_results[model], f, indent=2)
 print('GROUND TRUTH___')
