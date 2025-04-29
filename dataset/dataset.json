@@ -332,7 +332,7 @@
       "URL": "http://example.com/status?ip=127.0.0.1;whoami"
     },
     "label": "Malicious",
-    "attack": "Command Injection"
+    "attack": "cmdi"
   },
   {
     "log": {
@@ -353,7 +353,7 @@
       "URL": "http://example.com/ping?host=8.8.8.8&&id"
     },
     "label": "Malicious",
-    "attack": "Command Injection"
+    "attack": "cmdi"
   },
   {
     "log": {
@@ -374,7 +374,7 @@
       "URL": "http://example.com/login HTTP/1.1"
     },
     "label": "Malicious",
-    "attack": "Command Injection"
+    "attack": "cmdi"
   },
   {
     "log": {
@@ -395,7 +395,7 @@
       "URL": "http://example.com/search?query=test%26cat%20/etc/passwd"
     },
     "label": "Malicious",
-    "attack": "Command Injection"
+    "attack": "cmdi"
   },
   {
     "log": {
@@ -416,7 +416,7 @@
       "URL": "http://example.com/upload HTTP/1.1"
     },
     "label": "Malicious",
-    "attack": "Command Injection"
+    "attack": "cmdi"
   },
   {
     "log": {
@@ -437,7 +437,7 @@
       "URL": "http://example.com/login HTTP/1.1"
     },
     "label": "Malicious",
-    "attack": "Header Smuggling"
+    "attack": "hsmg"
   },
   {
     "log": {
@@ -458,7 +458,7 @@
       "URL": "http://example.com/data HTTP/1.1"
     },
     "label": "Malicious",
-    "attack": "Header Smuggling"
+    "attack": "hsmg"
   },
   {
     "log": {
@@ -479,7 +479,7 @@
       "URL": "http://example.com/send HTTP/1.1"
     },
     "label": "Malicious",
-    "attack": "Header Smuggling"
+    "attack": "hsmg"
   },
   {
     "log": {
@@ -500,7 +500,7 @@
       "URL": "http://example.com/api HTTP/1.1"
     },
     "label": "Malicious",
-    "attack": "Header Smuggling"
+    "attack": "hsmg"
   },
   {
     "log": {
@@ -521,6 +521,6 @@
       "URL": "http://example.com/post HTTP/1.1"
     },
     "label": "Malicious",
-    "attack": "Header Smuggling"
+    "attack": "hsmg"
   }
 ]

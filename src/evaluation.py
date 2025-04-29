@@ -38,8 +38,10 @@ class Evaluation:
         return 2 * p * r / (p + r) if (p + r) != 0 else 0
 
     @staticmethod
-    def evaluate_from_lists(ground_truth: List[str], model_output: List[str]) -> dict:
+    def evaluate_from_lists(ground_truth: List[str], model_output: List[str], choice = None) -> dict:
         tp, tn, fp, fn = Evaluation.calculate_confusion_counts(ground_truth, model_output)
+        if choice == "acc":
+            return round(Evaluation.accuracy_score(tp, tn, fp, fn), 3)
         return Evaluation.evaluate_from_counts(tp, tn, fp, fn)
 
     @staticmethod

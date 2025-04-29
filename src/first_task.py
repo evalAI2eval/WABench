@@ -7,7 +7,7 @@ import evaluation
 
 # MODELS = ['llama3.2', 'deepseek-r1']
 MODELS = ['llama3.2']
-input_file = '../dataset/first_task_tests.json'
+input_file = '../dataset/data.json'
 
 if not os.path.exists(input_file):
     print(f"Input file '{input_file}' not found")
