@@ -584,7 +584,7 @@
             "URL": "http://localhost:8080/tienda1/publico/productos.jsp HTTP/1.1"
         },
         "label": "Benign",
-        "attack": "Normal"
+        "attack": "None"
     },
     {
         "log": {
@@ -605,6 +605,6 @@
             "URL": "http://localhost:8080/tienda1/miembros/fotos.jsp HTTP/1.1"
         },
         "label": "Normal",
-        "attack": "attack_type"
+        "attack": "None"
     }
 ]
