@@ -522,5 +522,89 @@
     },
     "label": "Malicious",
     "attack": "hsmg"
-  }
+  },
+  {
+        "log": {
+            "Method": "GET",
+            "User-Agent": "Mozilla/5.0 (compatible; Konqueror/3.5; Linux) KHTML/3.5.8 (like Gecko)",
+            "Pragma": "no-cache",
+            "Cache-Control": "no-cache",
+            "Accept": "text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5",
+            "Accept-encoding": "x-gzip, x-deflate, gzip, deflate",
+            "Accept-charset": "utf-8, utf-8;q=0.5, *;q=0.5",
+            "language": "en",
+            "host": "localhost:8080",
+            "cookie": "JSESSIONID=4097E91422D4317BD78670AADD6B32EB",
+            "content-type": "",
+            "connection": "close",
+            "lenght": "",
+            "content": "",
+            "URL": "http://localhost:8080/tienda1/imagenes/2.gif HTTP/1.1"
+        },
+        "label": "Benign",
+        "attack": "None"
+    },
+    {
+        "log": {
+            "Method": "GET",
+            "User-Agent": "Mozilla/5.0 (compatible; Konqueror/3.5; Linux) KHTML/3.5.8 (like Gecko)",
+            "Pragma": "no-cache",
+            "Cache-Control": "no-cache",
+            "Accept": "text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5",
+            "Accept-encoding": "x-gzip, x-deflate, gzip, deflate",
+            "Accept-charset": "utf-8, utf-8;q=0.5, *;q=0.5",
+            "language": "en",
+            "host": "localhost:8080",
+            "cookie": "JSESSIONID=B3A54CEED23670DEB87A5C6A69BAF6D6",
+            "content-type": "",
+            "connection": "close",
+            "lenght": "",
+            "content": "",
+            "URL": "http://localhost:8080/tienda1/imagenes/3.gif HTTP/1.1"
+        },
+        "label": "Benign",
+        "attack": "None"
+    },
+    {
+        "log": {
+            "Method": "GET",
+            "User-Agent": "Mozilla/5.0 (compatible; Konqueror/3.5; Linux) KHTML/3.5.8 (like Gecko)",
+            "Pragma": "no-cache",
+            "Cache-Control": "no-cache",
+            "Accept": "text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5",
+            "Accept-encoding": "x-gzip, x-deflate, gzip, deflate",
+            "Accept-charset": "utf-8, utf-8;q=0.5, *;q=0.5",
+            "language": "en",
+            "host": "localhost:8080",
+            "cookie": "JSESSIONID=D4A8129AECA7582A367BD2C29111C558",
+            "content-type": "",
+            "connection": "close",
+            "lenght": "",
+            "content": "",
+            "URL": "http://localhost:8080/tienda1/publico/productos.jsp HTTP/1.1"
+        },
+        "label": "Benign",
+        "attack": "Normal"
+    },
+    {
+        "log": {
+            "Method": "GET",
+            "User-Agent": "Mozilla/5.0 (compatible; Konqueror/3.5; Linux) KHTML/3.5.8 (like Gecko)",
+            "Pragma": "no-cache",
+            "Cache-Control": "no-cache",
+            "Accept": "text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5",
+            "Accept-encoding": "x-gzip, x-deflate, gzip, deflate",
+            "Accept-charset": "utf-8, utf-8;q=0.5, *;q=0.5",
+            "language": "en",
+            "host": "localhost:8080",
+            "cookie": "JSESSIONID=B859E39A9D7597532D32B1297412ECB4",
+            "content-type": "",
+            "connection": "close",
+            "lenght": "",
+            "content": "",
+            "URL": "http://localhost:8080/tienda1/miembros/fotos.jsp HTTP/1.1"
+        },
+        "label": "Normal",
+        "attack": "attack_type"
+    }
 ]
